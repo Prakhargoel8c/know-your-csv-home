@@ -48,7 +48,7 @@ const App: Component = () => {
         </div>
         <img src="/images/cube.svg" width={548} height={587} />
       </div>
-      <div>
+      <div class="space-y-8">
         <div class="flex flex-col pt-32 hero-three relative items-center">
           <div class="font-heading font-semibold section-title text-3xl max-w-[40rem] text-center">
             Our user-friendly interface makes it easy to get started, even if you're not a data scientist. And with our customizable options, you can
@@ -62,7 +62,18 @@ const App: Component = () => {
             Don't waste any more time staring at spreadsheets. Try CSVSummary today and see your data in a whole new light.
           </div>
         </div>
+        <div class="flex gap-2 pt-12 text-base justify-center">
+          <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white">Join the waitlist</button>
+          <button class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">Get in touch</button>
+        </div>
       </div>
+      <div class="grid place-items-center">
+        <div class="rounded-full flex py-3 px-6 bg-white text-white bg-opacity-[0.15] text-xl gap-3 items-center">
+          <Logo />
+          CSVSummary
+        </div>
+      </div>
+      <div></div>
     </div>
   );
 };
