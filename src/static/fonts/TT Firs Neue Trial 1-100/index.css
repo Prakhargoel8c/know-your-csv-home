@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('./TT Firs Neue Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('./TT Firs Neue Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
