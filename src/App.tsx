@@ -48,7 +48,17 @@ const App: Component = () => {
         </div>
         <img src="/images/cube.svg" width={548} height={587} />
       </div>
-      <div class=""></div>
+      <div>
+        <div class="flex flex-col pt-32 hero-three relative items-center">
+          <div class="font-heading font-semibold section-title text-3xl max-w-[40rem] text-center">
+            Our user-friendly interface makes it easy to get started, even if you're not a data scientist. And with our customizable options, you can
+            tailor your results to your exact needs.
+          </div>
+        </div>
+        <div class="grid place-items-center">
+          <img src="/images/funnelLight.png" alt="hero" width={654} height={465} />
+        </div>
+      </div>
     </div>
   );
 };
