@@ -55,8 +55,12 @@ const App: Component = () => {
             tailor your results to your exact needs.
           </div>
         </div>
-        <div class="grid place-items-center">
+        <div class="grid place-items-center relative">
+          <img src="/images/stars.svg" alt="hero" width={943} height={678} class="absolute left-[20%]" />
           <img src="/images/funnelLight.png" alt="hero" width={654} height={465} />
+          <div class="font-heading font-semibold section-title text-3xl max-w-[40rem] text-center">
+            Don't waste any more time staring at spreadsheets. Try CSVSummary today and see your data in a whole new light.
+          </div>
         </div>
       </div>
     </div>
