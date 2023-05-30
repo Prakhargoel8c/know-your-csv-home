@@ -13,7 +13,7 @@ const WaitlistSchema = z.object({
 
 type Waitlist = z.infer<typeof WaitlistSchema>;
 
-const supabase = createClient('https://cpbbojojpwdrqtbdmhaz.supabase.co', process.env.SOLID_APP_SUPERBASE_ANNON);
+const supabase = createClient('https://cpbbojojpwdrqtbdmhaz.supabase.co', import.meta.env.VITE_SUPERBASE_ANNON);
 
 interface WaitlistProps {
   isOpen: Accessor<boolean>;

@@ -16,7 +16,10 @@ const App: Component = () => {
                 <Logo />
                 CSVSummary
               </span>
-              <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white text-base">
+              <button
+                class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white text-base"
+                onClick={toggleWaitlist}
+              >
                 Join the waitlist
               </button>
             </div>
@@ -27,7 +30,9 @@ const App: Component = () => {
                   Welcome to CSVSummary, the smart tool that turns your <br /> data into insights.
                 </div>
                 <div class="flex gap-2 mt-6 text-base">
-                  <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white">Join the waitlist</button>
+                  <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white" onClick={toggleWaitlist}>
+                    Join the waitlist
+                  </button>
                   <button class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">Get in touch</button>
                 </div>
               </div>
@@ -71,7 +76,9 @@ const App: Component = () => {
               </div>
             </div>
             <div class="flex gap-2 pt-12 text-base justify-center">
-              <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white">Join the waitlist</button>
+              <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white" onClick={toggleWaitlist}>
+                Join the waitlist
+              </button>
               <button class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">Get in touch</button>
             </div>
           </div>
@@ -87,7 +94,7 @@ const App: Component = () => {
           <div>Designed by Kartik Dhaduk</div>
         </div>
       </div>
-      {isWaitlistOpen() && <Waitlist isOpen={isWaitlistOpen} onClose={toggleWaitlist} />}
+      <Waitlist isOpen={isWaitlistOpen} onClose={toggleWaitlist} />
     </>
   );
 };
