@@ -17,6 +17,7 @@ const App: Component = () => {
                 CSVSummary
               </span>
               <button
+                type="button"
                 class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white text-base"
                 onClick={toggleWaitlist}
               >
@@ -30,10 +31,16 @@ const App: Component = () => {
                   Welcome to CSVSummary, the smart tool that turns your <br /> data into insights.
                 </div>
                 <div class="flex gap-2 mt-6 text-base">
-                  <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white" onClick={toggleWaitlist}>
+                  <button
+                    type="button"
+                    class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white"
+                    onClick={toggleWaitlist}
+                  >
                     Join the waitlist
                   </button>
-                  <button class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">Get in touch</button>
+                  <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">
+                    Get in touch
+                  </button>
                 </div>
               </div>
               <div class="relative">
@@ -76,10 +83,16 @@ const App: Component = () => {
               </div>
             </div>
             <div class="flex gap-2 pt-12 text-base justify-center">
-              <button class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white" onClick={toggleWaitlist}>
+              <button
+                type="button"
+                class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white"
+                onClick={toggleWaitlist}
+              >
                 Join the waitlist
               </button>
-              <button class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">Get in touch</button>
+              <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">
+                Get in touch
+              </button>
             </div>
           </div>
           <div class="grid place-items-center">

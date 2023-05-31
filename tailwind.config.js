@@ -8,6 +8,7 @@ module.exports = {
         background: '#010314',
         black: {
           100: '#2A2B3A',
+          200: '#1C1E2E',
           200: '#BABCD2',
           700: '#010314',
           1000: '#000000',
