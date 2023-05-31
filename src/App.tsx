@@ -103,9 +103,9 @@ const App: Component = () => {
             </div>
           </div>
         </div>
-        <div class="border-t border-black-100 text-xs py-4 px-14 text-black-200 flex items-center justify-between">
+        <div class="border-t border-black-100 text-xs py-4 px-4 md:px-14 text-black-200 flex items-center justify-between">
           <div>© 2023 CSV Summary. All rights reserved.</div>
-          <div>Designed by Kartik Dhaduk</div>
+          <div class="hidden md:block">Designed by Kartik Dhaduk</div>
         </div>
       </div>
       <Waitlist isOpen={isWaitlistOpen} onClose={toggleWaitlist} />
