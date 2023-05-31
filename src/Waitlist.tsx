@@ -22,10 +22,20 @@ interface WaitlistProps {
 }
 
 export const Waitlist: Component<WaitlistProps> = (props) => {
-  const { form, errors } = createForm<Waitlist>({ extend: validator({ schema: WaitlistSchema }), onSubmit: (values) => {} });
+  const { form, errors } = createForm<Waitlist>({
+    extend: validator({ schema: WaitlistSchema }),
+    onSubmit: (values) => {
+      supabase
+        .from('waitlist')
+        .insert(values)
+        .then(() => {
+          props.onClose();
+        });
+    },
+  });
   return (
     <Modal open={props.isOpen()} onClose={props.onClose}>
-      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#1C1E2E] p-7 w-[35rem] flex flex-col gap-4">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#1C1E2E] p-7 md:w-[35rem] flex flex-col gap-4 w-full">
         <div class="flex justify-between">
           <h1 class="text-xl font-semibold section-title">Join the waitlist</h1>
           <button
