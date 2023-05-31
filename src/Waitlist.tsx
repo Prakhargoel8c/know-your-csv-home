@@ -5,6 +5,7 @@ import { validator } from '@felte/validator-zod';
 import { createForm } from '@felte/solid';
 import { Modal } from '@suid/material';
 import Close from './static/icons/close.svg';
+import toast from 'solid-toast';
 
 const WaitlistSchema = z.object({
   email: z.string().nonempty('Please enter a email address').email('Please enter a valid email address'),
@@ -25,12 +26,20 @@ export const Waitlist: Component<WaitlistProps> = (props) => {
   const { form, errors } = createForm<Waitlist>({
     extend: validator({ schema: WaitlistSchema }),
     onSubmit: (values) => {
-      supabase
-        .from('waitlist')
-        .insert(values)
-        .then(() => {
-          props.onClose();
-        });
+      props.onClose();
+      toast.promise(
+        new Promise((resolve, reject) =>
+          supabase
+            .from('waitlist')
+            .insert(values)
+            .then((result) => (result.error ? reject(result.error) : resolve(result)))
+        ),
+        {
+          loading: 'Adding you to the waitlist...',
+          success: 'You have been added to the waitlist!',
+          error: 'Something went wrong. Please try again later.',
+        }
+      );
     },
   });
   return (

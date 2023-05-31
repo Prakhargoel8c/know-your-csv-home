@@ -1,4 +1,5 @@
 import { Component, createSignal } from 'solid-js';
+import { Toaster } from 'solid-toast';
 import Logo from './static/icons/logo.svg';
 import Search from './static/icons/search.svg';
 import { Waitlist } from './Waitlist';
@@ -108,6 +109,7 @@ const App: Component = () => {
         </div>
       </div>
       <Waitlist isOpen={isWaitlistOpen} onClose={toggleWaitlist} />
+      <Toaster />
     </>
   );
 };
