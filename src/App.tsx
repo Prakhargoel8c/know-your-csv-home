@@ -15,7 +15,7 @@ const App: Component = () => {
             <div class="flex justify-between md:px-12">
               <span class="text-xl font-bold font-heading space-x-2 flex items-center">
                 <Logo />
-                <span class="hidden md:block">CSVSummary</span>
+                <span class="hidden md:block">Know your CSV</span>
               </span>
               <button
                 type="button"
@@ -29,7 +29,7 @@ const App: Component = () => {
               <div class="max-w-md hero-title-section flex flex-col gap-6">
                 <div class="hero-title font-heading text-4xl md:text-7xl">Unleash the power of your data.</div>
                 <div class="md:text-sm text-xs">
-                  Welcome to CSVSummary, the smart tool that turns your <br /> data into insights.
+                  Welcome to Know your CSV, the smart tool that turns your <br /> data into insights.
                 </div>
                 <div class="flex gap-2 mt-6 text-base">
                   <button
@@ -80,7 +80,7 @@ const App: Component = () => {
               <img src="/images/stars.svg" alt="hero" width={943} height={678} class="absolute left-[20%]" />
               <img src="/images/funnelLight.png" alt="hero" width={654} height={465} />
               <div class="font-heading font-semibold section-title text-xl md:text-3xl max-w-[40rem] text-center">
-                Don't waste any more time staring at spreadsheets. Try CSVSummary today and see your data in a whole new light.
+                Don't waste any more time staring at spreadsheets. Try Know your CSV today and see your data in a whole new light.
               </div>
             </div>
             <div class="flex gap-2 pt-12 text-base justify-center">
@@ -99,7 +99,7 @@ const App: Component = () => {
           <div class="grid place-items-center">
             <div class="rounded-full flex py-3 px-6 bg-white text-white bg-opacity-[0.15] text-xl gap-3 items-center font-heading">
               <Logo />
-              CSVSummary
+              Know your CSV
             </div>
           </div>
         </div>
