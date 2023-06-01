@@ -67,9 +67,9 @@ export const ContactUs: Component<ContactUsProps> = (props) => {
             {errors()?.email?.length && <p class="px-1 text-red-500">{errors()?.email[0]}</p>}
           </div>
           <div class="flex flex-col gap-1.5">
-            <label for="referal">Referal</label>
+            <label for="message">Message</label>
             <textarea
-              name="referal"
+              name="message"
               placeholder="Word of mouth, Google search etc"
               class="rounded-lg py-2.5 px-3.5 bg-[#292C42] placeholder:text-[#667085]"
               rows={3}
