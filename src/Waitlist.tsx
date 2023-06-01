@@ -57,14 +57,14 @@ export const Waitlist: Component<WaitlistProps> = (props) => {
         </div>
         <form class="flex flex-col gap-6 text-sm text-white" ref={form}>
           <div class="flex flex-col gap-1.5">
-            <label for="email">Email</label>
-            <input name="email" type="email" placeholder="you@company.com" class="rounded-lg py-2.5 px-3.5 bg-[#292C42] placeholder:text-[#667085]" />
-            {errors()?.email?.length && <p class="px-1 text-red-500">{errors()?.email[0]}</p>}
-          </div>
-          <div class="flex flex-col gap-1.5">
             <label for="name">Name</label>
             <input name="name" type="text" placeholder="Enter your name" class="rounded-lg py-2.5 px-3.5 bg-[#292C42] placeholder:text-[#667085]" />
             {errors()?.name?.length && <p class="px-1 text-red-500">{errors()?.name[0]}</p>}
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="email">Email</label>
+            <input name="email" type="email" placeholder="you@company.com" class="rounded-lg py-2.5 px-3.5 bg-[#292C42] placeholder:text-[#667085]" />
+            {errors()?.email?.length && <p class="px-1 text-red-500">{errors()?.email[0]}</p>}
           </div>
           <div class="flex flex-col gap-1.5">
             <label for="referal">Referal</label>
