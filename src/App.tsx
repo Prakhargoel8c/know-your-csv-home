@@ -94,7 +94,7 @@ const App: Component = () => {
               >
                 Join the waitlist
               </button>
-              <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">
+              <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500" onClick={toggleContactUs}>
                 Get in touch
               </button>
             </div>
