@@ -1,15 +1,18 @@
 import { Component, createSignal } from 'solid-js';
 import { Toaster } from 'solid-toast';
+import { ContactUs } from './ContactUs';
 import Logo from './static/icons/logo.svg';
 import Search from './static/icons/search.svg';
 import { Waitlist } from './Waitlist';
 
 const App: Component = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = createSignal(false);
+  const [contactUsOpen, setContactUsOpen] = createSignal(false);
   const toggleWaitlist = () => setIsWaitlistOpen(!isWaitlistOpen());
+  const toggleContactUs = () => setContactUsOpen(!contactUsOpen());
   return (
     <>
-      <div class="bg-background h-screen w-screen pt-14 text-white overflow-auto space-y-16">
+      <div class="bg-background h-screen w-screen pt-14 text-white overflow-auto space-y-16 overflow-x-hidden md:overflow-x-auto">
         <div class="space-y-16 md:px-8 px-4">
           <div class="flex flex-col hero gap-16">
             <div class="flex justify-between md:px-12">
@@ -39,7 +42,7 @@ const App: Component = () => {
                   >
                     Join the waitlist
                   </button>
-                  <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500">
+                  <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500" onClick={toggleContactUs}>
                     Get in touch
                   </button>
                 </div>
@@ -104,11 +107,12 @@ const App: Component = () => {
           </div>
         </div>
         <div class="border-t border-black-100 text-xs py-4 px-4 md:px-14 text-black-200 flex items-center justify-between">
-          <div>© 2023 CSV Summary. All rights reserved.</div>
+          <div>© 2023 Know your CSV. All rights reserved.</div>
           {/* <div class="hidden md:block">Designed by Kartik Dhaduk</div> */}
         </div>
       </div>
       <Waitlist isOpen={isWaitlistOpen} onClose={toggleWaitlist} />
+      <ContactUs isOpen={contactUsOpen} onClose={toggleContactUs} />
       <Toaster />
     </>
   );
