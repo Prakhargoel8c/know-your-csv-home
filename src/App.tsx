@@ -51,7 +51,7 @@ const App: Component = () => {
                 <span class="absolute left-[47%] top-1/4">
                   <Search />
                 </span>
-                <img src="/images/heroBackground.png" alt="hero" width={654} height={465} class="animate-spin-slow" />
+                <img src="/images/heroBackground.png" alt="hero" width={654} height={465} />
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const App: Component = () => {
                 <span class="bg-white bg-opacity-[0.15] rounded-full text-xs py-1 px-3">Easy peasy</span>
               </div>
             </div>
-            <img src="/images/cube.svg" width={548} height={587} />
+            <img src="/images/cube.svg" width={548} height={587} class="animate-spin-slow" />
           </div>
           <div class="space-y-8">
             <div class="flex flex-col pt-32 hero-three relative items-center">
