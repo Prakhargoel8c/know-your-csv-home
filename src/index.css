@@ -63,4 +63,7 @@ body {
   border-top-left-radius: 38.4px;
   border-top-right-radius: 38.4px;
   background-size: cover;
+  position: sticky;
+  z-index: 50;
+  top: 20px;
 }

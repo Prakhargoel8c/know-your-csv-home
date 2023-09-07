@@ -12,10 +12,10 @@ const App: Component = () => {
   const toggleContactUs = () => setContactUsOpen(!contactUsOpen());
   return (
     <>
-      <div class="bg-background h-screen w-screen pt-14 text-white overflow-auto space-y-16 overflow-x-hidden md:overflow-x-auto">
+      <div class="bg-background h-screen w-screen text-white overflow-auto space-y-16 overflow-x-hidden md:overflow-x-auto">
         <div class="space-y-16 md:px-8 px-4">
           <div class="flex flex-col hero gap-16">
-            <div class="flex justify-between md:px-12">
+            <div class="flex justify-between md:px-12 pt-14">
               <span class="text-xl font-bold font-heading space-x-2 flex items-center">
                 <Logo />
                 <span class="hidden md:block">Know your CSV</span>
@@ -72,31 +72,35 @@ const App: Component = () => {
             </div>
             <img src="/images/cube.svg" width={548} height={587} class="animate-spin-slow" />
           </div>
-          <div class="space-y-8">
-            <div class="flex flex-col pt-32 hero-three relative items-center">
+          <div>
+            <div class="h-5 bg-background sticky top-0 z-50" />
+            <div class="hero-three relative h-[180px]" />
+            <div class="flex flex-col relative items-center pt-32">
               <div class="font-heading font-semibold section-title text-xl md:text-3xl max-w-[40rem] text-center">
                 Our user-friendly interface makes it easy to get started, even if you're not a data scientist. And with our customizable options, you
                 can tailor your results to your exact needs.
               </div>
             </div>
-            <div class="grid place-items-center relative">
-              <img src="/images/stars.svg" alt="hero" width={943} height={678} class="absolute left-[20%]" />
-              <img src="/images/funnelLight.png" alt="hero" width={654} height={465} />
-              <div class="font-heading font-semibold section-title text-xl md:text-3xl max-w-[40rem] text-center">
-                Don't waste any more time staring at spreadsheets. Try Know your CSV today and see your data in a whole new light.
+            <div class="space-y-8">
+              <div class="grid place-items-center relative">
+                <img src="/images/stars.svg" alt="hero" width={943} height={678} class="absolute left-[20%]" />
+                <img src="/images/funnelLight.png" alt="hero" width={654} height={465} />
+                <div class="font-heading font-semibold section-title text-xl md:text-3xl max-w-[40rem] text-center">
+                  Don't waste any more time staring at spreadsheets. Try Know your CSV today and see your data in a whole new light.
+                </div>
               </div>
-            </div>
-            <div class="flex gap-2 pt-12 text-base justify-center">
-              <button
-                type="button"
-                class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white"
-                onClick={toggleWaitlist}
-              >
-                Join the waitlist
-              </button>
-              <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500" onClick={toggleContactUs}>
-                Get in touch
-              </button>
+              <div class="flex gap-2 pt-12 text-base justify-center">
+                <button
+                  type="button"
+                  class="bg-white text-black-700 rounded-full px-4 py-1.5 hover:bg-purple-500 hover:text-white"
+                  onClick={toggleWaitlist}
+                >
+                  Join the waitlist
+                </button>
+                <button type="button" class="text-white rounded-full px-4 py-1.5 hover:bg-purple-500" onClick={toggleContactUs}>
+                  Get in touch
+                </button>
+              </div>
             </div>
           </div>
           <div class="grid place-items-center">
