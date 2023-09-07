@@ -51,7 +51,7 @@ const App: Component = () => {
                 <span class="absolute left-[47%] top-1/4">
                   <Search />
                 </span>
-                <img src="/images/heroBackground.png" alt="hero" width={654} height={465} />
+                <img src="/images/heroBackground.png" alt="hero" width={654} height={465} class="animate-spin-slow" />
               </div>
             </div>
           </div>

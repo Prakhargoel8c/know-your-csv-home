@@ -21,6 +21,9 @@ module.exports = {
         sans: ['Inter', 'sans-serif'],
         heading: ['TT Firs Neue', 'Inter', 'sans-serif'],
       },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+      },
     },
   },
   plugins: [],
